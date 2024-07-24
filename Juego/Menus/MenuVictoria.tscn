@@ -1,0 +1,247 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Juego/Menus/Botones/BotonSalir.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://recursos/Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://recursos/Players/bunny1_jump.png" type="Texture" id=4]
+[ext_resource path="res://Juego/Menus/MenuVictoria.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.513726, 0.635294, 0.972549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.231373, 0.298039, 0.486275, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.231373, 0.298039, 0.486275, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_size = 5
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.881836, 0.316049, 0.316049, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.317647, 0.0627451, 0.0627451, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.317647, 0.0627451, 0.0627451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_size = 5
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_bottom = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 35
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_bottom = 20
+font_data = ExtResource( 3 )
+
+[node name="MenuVictoria" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.678431, 0.901961, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 369.012, 357.34 )
+texture = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -592.652
+margin_top = -200.0
+margin_right = -192.652
+margin_bottom = 200.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonMenuPrincipal" type="Button" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 194.0
+rect_pivot_offset = Vector2( 100, 25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 1, 0.584314, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 0.584314, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.584314, 1 )
+text = "MENU PRINCIPAL"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 198.0
+margin_right = 400.0
+margin_bottom = 202.0
+
+[node name="BotonSalir" type="Button" parent="VBoxContainer"]
+margin_top = 206.0
+margin_right = 400.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "SALIR"
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 0.678431, 0.901961, 1, 1 )
+margin_left = 86.1133
+margin_top = 159.568
+margin_right = 654.115
+margin_bottom = 255.568
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.154552, 0.18871, 0.285156, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color( 0.32549, 0.803922, 0.662745, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.5
+margin_top = -48.0
+margin_right = 189.5
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 16 )
+text = "GANASTE!!!Q"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelPuntaje" type="Panel" parent="."]
+modulate = Color( 0.678431, 0.901961, 1, 1 )
+margin_left = 86.1133
+margin_top = 462.816
+margin_right = 654.115
+margin_bottom = 558.816
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PanelPuntaje"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.154552, 0.18871, 0.285156, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puntaje" type="Label" parent="PanelPuntaje"]
+modulate = Color( 0.32549, 0.803922, 0.662745, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -179.0
+margin_top = -27.5
+margin_right = 29.0
+margin_bottom = 45.5
+custom_fonts/font = SubResource( 17 )
+text = "PUNTAJE: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSalir" to="VBoxContainer/BotonSalir" method="_on_pressed"]

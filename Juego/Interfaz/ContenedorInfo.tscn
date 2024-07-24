@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=1]
+[ext_resource path="res://recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://recursos/HUD/lifes.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="ContenedorInfo" type="NinePatchRect"]
+self_modulate = Color( 0.231373, 0.298039, 0.486275, 0.380392 )
+margin_right = 130.0
+margin_bottom = 52.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -58.9296
+margin_top = -46.8393
+margin_right = -6.92958
+margin_bottom = 24.1607
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cantidad" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 8.81945
+margin_top = -19.5
+margin_right = 51.8195
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.584314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

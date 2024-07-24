@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PlataformaTrampa.wav-0d6942bca6d59cd75dd404dd6d826509.sample"
+
+[deps]
+
+source_file="res://recursos/Jfxr/PlataformaTrampa.wav"
+dest_files=[ "res://.import/PlataformaTrampa.wav-0d6942bca6d59cd75dd404dd6d826509.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
